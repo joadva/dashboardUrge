@@ -1,33 +1,70 @@
 .App {
-  text-align: center;
+    text-align: center;
 }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 40vmin;
-  pointer-events: none;
+
+/* Cuadrícula de tdashboard CSS */
+
+
+/* Asignar instrucciones de cuadrícula a nuestro contenedor de cuadrícula principal */
+
+.grid-container {
+    display: grid;
+    grid-template-columns: 240px 1fr;
+    grid-template-rows: 50px 1fr 50px;
+    grid-template-areas: "sidenav header" "sidenav main" "sidenav footer";
+    height: 100vh;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+
+/* Dar a cada elemento su nombre de cada zona */
+
+.header {
+    grid-area: header;
+    background-color: #042C3C;
 }
 
-.App-link {
-  color: #61dafb;
+.sidenav {
+    grid-area: sidenav;
+    background-color: #042C3C;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.main {
+    grid-area: main;
+    background-color: #25cf8e;
+}
+
+.footer {
+    grid-area: footer;
+    background-color: #648ca6;
+}
+
+.sidenav__list {
+    padding: 0;
+    margin-top: 85px;
+    list-style-type: none;
+}
+
+.sidenav__list-item {
+    padding: 20px 20px 20px 40px;
+    color: #ddd;
+}
+
+.sidenav__list-item:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+    cursor: pointer;
+}
+
+
+/* asignar en el main par ale headr  */
+
+.main-header {
+    display: flex;
+    justify-content: space-between;
+    margin: 20px;
+    padding: 20px;
+    height: 150px;
+    /* Force our height since we don't have actual content yet */
+    background-color: #e3e4e6;
+    color: slategray;
 }
